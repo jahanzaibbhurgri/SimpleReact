@@ -26,8 +26,8 @@ steps:
 - script: |
     npm test -- --watchAll=false || exit 1
   displayName: 'unit test'
-- task: PublishBuildArtifacts@1    
-  displayName: 'Publish Artifact: drop'
+- task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'artifact'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
