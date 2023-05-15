@@ -27,3 +27,4 @@ steps:
     npm test -- --watchAll=false || exit 1
   displayName: 'unit test'
 
+- task: PublishBuildArtifacts@1
